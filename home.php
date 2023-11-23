@@ -53,7 +53,7 @@
             border: none;
             border-radius: 10px;
             margin-right: 10px;
-            background-color: #333; 
+            background-color: #A5A5AB; 
             color: white;
         }
 
@@ -115,7 +115,7 @@
 
  
     <div class="content">
-        <h1>Welcome to our Home Page!</h1>
+
         <div class="search-bar">
             
             <input type="text" placeholder="Search...">
