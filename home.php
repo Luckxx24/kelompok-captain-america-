@@ -121,7 +121,7 @@
             <input type="text" placeholder="Search...">
             <button>Search</button>
         </div>
-        <!-- konten -->
+        <!-- konten --> isi konten
     </div>
 
     <!-- Footer -->
