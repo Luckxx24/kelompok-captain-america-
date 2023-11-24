@@ -86,7 +86,7 @@
         <input type="password" id="password" name="password" required placeholder="Password">
 
        
-        <input type="submit" value="Sign in">
+        <input type="submit" value="Sign up">
         <p>sudah memiliki akun? <a href="login.php">login</a></p>
     </form>
 </body>
