@@ -68,7 +68,7 @@
     <img class="logo" src="logo.png" alt="Logo">
 
     <form action="login.php" method="POST">
-    <h2 style="text-align: center; color: #0000FF;">Sign in</h2>
+    <h2 style="text-align: center; color: #0000FF;">Sign up</h2>
 
         <label for="Nama"></label>
         <input type="text" id="Nama" name="username" required placeholder="Nama">
