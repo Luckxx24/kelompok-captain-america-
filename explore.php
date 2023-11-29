@@ -1,9 +1,13 @@
 <?php
     include 'koneksi.php';
+    session_start();
+    if (!isset($_SESSION['id'])) {
+        header('Location: login.php');
+        exit();
+    }
     $query = "select * from film";
     $result = mysqli_query($koneksi,$query);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +118,6 @@
             background-color: #001F40;
         }
 
-
         footer {
             background-color: #870000;
             padding: 20px; 
@@ -127,7 +130,6 @@
             align-items: flex-end; 
         }
 
-      
         .social-icons img {
             width: 30px; 
             margin: 0 5px;

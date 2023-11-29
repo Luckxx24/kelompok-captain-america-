@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['id'])) {
+        header('Location: login.php');
+        exit();
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +117,7 @@
 
         <div style="display: flex; align-items: center; margin-right: 70px;">
             <img class="logo" src="account-logo.png" alt="tiktok">
-            <button class="button">Logout</button>
+            <a href="logout.php"><button class="button">Logout</button></a>
         </div>
     </nav>
 

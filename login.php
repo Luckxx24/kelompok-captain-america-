@@ -1,3 +1,32 @@
+<?php
+    include 'koneksi.php';
+    session_start();
+
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $query = "SELECT * FROM user WHERE username = '$username'";
+        $result = mysqli_query($koneksi, $query);
+
+        if ($result) {
+            $user = mysqli_fetch_assoc($result);
+
+            if ($user && password_verify($password, $user['password'])) {
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['nama'] = $user['nama'];
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['email'] = $user['email'];
+                header('Location: home.php');
+                exit();
+            } else {
+                echo '<script>alert("Username atau password salah.");</script>';
+            }
+        } else {
+            echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +93,7 @@
     </style>
 </head>
 <body>
-    <form action="login.php" method="POST">
+    <form action="" method="POST">
         <h2 style="text-align: center; color: #0000FF;">Login</h2>
 
       
@@ -76,8 +105,8 @@
         <label for="password"></label>
         <input type="password" id="password" name="password" required placeholder="Password">
 
-        <input type="submit" value="Sign in">
-        <p>Belum memiliki akun? <a href="login.php">Log in</a></p>
+        <input type="submit" value="Sign in" name="login">
+        <p>Belum memiliki akun? <a href="register.php">Sign up</a></p>
     </form>
 </body>
 </html>

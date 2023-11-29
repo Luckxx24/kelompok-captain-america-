@@ -1,16 +1,22 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari formulir
-    $nama = $_POST["username"];
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    // Lakukan proses registrasi (tambahkan ke database, dll.)
-
-    // Setelah berhasil registrasi, tampilkan alert
-    echo '<script>alert("Registrasi Anda Berhasil!");</script>';
-}
+    include 'koneksi.php';
+    if (isset($_POST['register'])) {
+        $username = $_POST['username'];
+        $nama = $_POST['nama'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+    
+        // Perbarui query untuk menyimpan data ke dalam tabel user
+        $query = "INSERT INTO user (username, nama, email, password) VALUES ('$username', '$nama', '$email', '$hashedpassword')";
+        
+        // Eksekusi query
+        if (mysqli_query($koneksi, $query)) {
+            echo '<script>alert("Registrasi Anda Berhasil!"); window.location.href = "login.php";</script>';
+        } else {
+            echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,11 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <img class="logo" src="logo.png" alt="Logo">
 
-    <form action="login.php" method="POST">
+    <form action="" method="POST">
     <h2 style="text-align: center; color: #0000FF;">Sign up</h2>
 
         <label for="Nama"></label>
-        <input type="text" id="Nama" name="username" required placeholder="Nama">
+        <input type="text" id="Nama" name="nama" required placeholder="Nama">
 
         
         <label for="username"></label>
@@ -100,8 +106,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" id="password" name="password" required placeholder="Password">
 
        
-        <input type="submit" value="Sign up">
-        <p>sudah memiliki akun? <a href="login.php">login</a></p>
+        <input type="submit" value="Sign up" name="register">
+        <p>sudah memiliki akun? <a href="login.php">log in</a></p>
     </form>
 </body>
 </html>
