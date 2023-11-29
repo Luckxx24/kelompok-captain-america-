@@ -1,3 +1,17 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari formulir
+    $nama = $_POST["username"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // Lakukan proses registrasi (tambahkan ke database, dll.)
+
+    // Setelah berhasil registrasi, tampilkan alert
+    echo '<script>alert("Registrasi Anda Berhasil!");</script>';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,16 +1,22 @@
 <?php
     include 'koneksi.php';
-    $query = "select * from film";
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    $query = "select * from film where id_film = $id";
     $result = mysqli_query($koneksi,$query);
+    $data = mysqli_fetch_array($result);
+}
+   
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Review</title>
     <style>
         body {
             margin: 0;
@@ -83,38 +89,6 @@
             width:90px;
         }
 
-        .movie-posters {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.movie-poster {
-    margin: 10px;
-    text-align: center;
-}
-
-.movie-poster img {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-}
-
-.movie-poster a {
-    display: block;
-    margin-top: 10px;
-    background-color: #002D5C;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.movie-poster a:hover {
-    background-color: #001F40;
-}
-
-
         footer {
             background-color: #870000;
             padding: 20px; 
@@ -149,47 +123,15 @@
         </div>
     </nav>
 
- 
     <div class="content">
-
-        <div class="search-bar">
-            
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-    
-    </div>
-
-    <div class="movie-posters">
-        <?php
-        while($data = mysqli_fetch_array($result)){
-            
-        ?>
-            <!-- Film 1 -->
-            <div class="movie-poster">
-                <img src="<?=$data['poster_film']?>" alt="Film 1 Poster">
-                <a href="review.php?id=<?=$data['id_film']?>">Review</a>
-            </div>
-            <?php
-            }?>
-
-            <!-- Film 2 -->
-            <!-- <div class="movie-poster">
-                <img src="captainamerica.jpeg" alt="Film 2 Poster">
-                <a href="review.php?title=Film 2">Review</a>
-            </div> -->
-
-             <!-- Film 3 -->
-             <!-- <div class="movie-poster">
-                <img src="civil.jpg" alt="Film 3 Poster">
-                <a href="review.php?title=Film 3">Review</a>
-            </div> -->
-
-             <!-- Film 4 -->
-             <!-- <div class="movie-poster">
-                <img src="infinity.jpg" alt="Film 4 Poster">
-                <a href="review.php?title=Film 4">Review</a>
-            </div> -->
+        <!-- Informasi Review Film -->
+        <div class="movie-review">
+            <!-- Tampilkan Informasi Film -->
+            <h2><?php echo $data['judul_film']; ?></h2>
+            <img src="<?php echo $data['poster_film']; ?>" alt="<?php echo $data['judul_film']; ?> Poster">
+            <p>Rilis: <?php echo $data['tahun_rilis']; ?></p>
+            <p>Rating: <?php echo $data['rating']; ?></p>
+            <p>Deskripsi: <?php echo $data['deskripsi']; ?></p>
         </div>
     </div>
 
