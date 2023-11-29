@@ -17,6 +17,7 @@
                 $_SESSION['nama'] = $user['nama'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
+
                 header('Location: home.php');
                 exit();
             } else {
@@ -26,6 +27,7 @@
             echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
