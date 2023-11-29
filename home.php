@@ -1,10 +1,3 @@
-<?php
-    include 'koneksi.php';
-    $query = "select * from film";
-    $result = mysqli_query($koneksi,$query);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,43 +76,14 @@
             width:90px;
         }
 
-        .movie-posters {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.movie-poster {
-    margin: 10px;
-    text-align: center;
-}
-
-.movie-poster img {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-}
-
-.movie-poster a {
-    display: block;
-    margin-top: 10px;
-    background-color: #002D5C;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.movie-poster a:hover {
-    background-color: #001F40;
-}
-
+        
 
         footer {
             background-color: #870000;
             padding: 20px; 
             color: white;
             text-align: center;
+            position: fixed;
             bottom: 0;
             width: 100%;
             display: flex;
@@ -157,40 +121,7 @@
             <input type="text" placeholder="Search...">
             <button>Search</button>
         </div>
-    
-    </div>
-
-    <div class="movie-posters">
-        <?php
-        while($data = mysqli_fetch_array($result)){
-            
-        ?>
-            <!-- Film 1 -->
-            <div class="movie-poster">
-                <img src="<?=$data['poster_film']?>" alt="Film 1 Poster">
-                <a href="review.php?id=<?=$data['id_film']?>">Review</a>
-            </div>
-            <?php
-            }?>
-
-            <!-- Film 2 -->
-            <!-- <div class="movie-poster">
-                <img src="captainamerica.jpeg" alt="Film 2 Poster">
-                <a href="review.php?title=Film 2">Review</a>
-            </div> -->
-
-             <!-- Film 3 -->
-             <!-- <div class="movie-poster">
-                <img src="civil.jpg" alt="Film 3 Poster">
-                <a href="review.php?title=Film 3">Review</a>
-            </div> -->
-
-             <!-- Film 4 -->
-             <!-- <div class="movie-poster">
-                <img src="infinity.jpg" alt="Film 4 Poster">
-                <a href="review.php?title=Film 4">Review</a>
-            </div> -->
-        </div>
+        <!-- konten --> isi konten
     </div>
 
     <!-- Footer -->

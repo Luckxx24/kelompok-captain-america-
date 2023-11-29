@@ -101,7 +101,6 @@ if(isset($_GET['id'])){
             align-items: flex-end; 
         }
 
-      
         .social-icons img {
             width: 30px; 
             margin: 0 5px;
