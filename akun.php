@@ -137,7 +137,7 @@ session_start();
     </nav>
 
     <div class="content">
-        <img class="profile-picture" src="profile-user.png" alt="Profile Picture">
+        <img class="profile-picture" src="user.jpg" alt="Profile Picture">
         <a href="">tambahkan foto</a>
         <b><p>Nama : <?=$_SESSION['nama']?><br></b></p>
         <b><p>Username : <?=$_SESSION['username']?><br></b></p>
