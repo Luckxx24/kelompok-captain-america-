@@ -157,7 +157,8 @@
             <input type="text" placeholder="Search...">
             <button>Search</button>
         </div>
-        <!-- konten --> isi konten
+        <h2>Rekomendasi</h2>
+     
     </div>
 
     <!-- Footer -->
