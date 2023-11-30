@@ -1,3 +1,8 @@
+<?php
+session_start();
+    include 'koneksi.php';
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,11 +139,10 @@
     <div class="content">
         <img class="profile-picture" src="profile-user.png" alt="Profile Picture">
         <a href="">tambahkan foto</a>
-
-        <b><p>Nama <br></b> John Doe</p>
-        <b><p>Username <br></b> john_doe</p>
-        <b><p>Email <br></b> john.doe@example.com</p>
-        <b><p>Password <br></b> ********</p>
+        <b><p>Nama : <?=$_SESSION['nama']?><br></b></p>
+        <b><p>Username : <?=$_SESSION['username']?><br></b></p>
+        <b><p>Email : <?=$_SESSION['email']?><br></b></p>
+        <b><p>Password : <?=$_SESSION['password']?><br></b></p>
         <button class="edit-button" value="Edit">Edit</button>
     </div>
 

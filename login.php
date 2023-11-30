@@ -17,6 +17,7 @@
                 $_SESSION['nama'] = $user['nama'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
+                $_SESSION['password'] = $user['password'];
 
                 header('Location: home.php');
                 exit();

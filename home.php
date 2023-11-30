@@ -7,6 +7,7 @@
     }
     $query = "select * from film";
     $result = mysqli_query($koneksi,$query);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
