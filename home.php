@@ -117,7 +117,6 @@
             margin-bottom: 2%;
         }
 
-
         .social-icons {
             display: flex;
             margin-right:30px;
@@ -188,9 +187,11 @@
         </div>
 
         <div style="display: flex; align-items: center; margin-right: 30px;">
-            <img class="profile" src="gambar/profile-user.png" alt="tiktok">
-            <button class="button">Logout</button>
-        </div>
+    <a href="akun.php">
+        <img class="profile" src="gambar/profile-user.png" alt="tiktok">
+    </a>
+    <button class="button">Logout</button>
+     </div>
     </nav>
 
  
@@ -202,7 +203,7 @@
         </button>
     </div>
     <h2>Rekomendasi</h2>
-    <<div class="movie-posters">
+    <div class="movie-posters">
         <?php
         while($data = mysqli_fetch_array($result)){
             
