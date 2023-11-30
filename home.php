@@ -103,44 +103,43 @@
         
 
         footer {
-    background-color: #870000;
-    padding: 5px;
-    color: white;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-bottom: 2%;
-}
+            background-color: #870000;
+            padding: 5px;
+            color: white;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto; 
+            margin-bottom: 2%;
+        }
 
 
-.social-icons {
-    display: flex;
-   margin-right:30px;
-}
+        .social-icons {
+            display: flex;
+            margin-right:30px;
+        }
 
-.social-icons img {
-    width: 30px;
-    margin-right: 10px; 
-}
-.logo-container {
-        display: flex;
-        align-items: center;
-        margin-left: 20px;
-    }
+        .social-icons img {
+            width: 30px;
+            margin-right: 10px; 
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
 
-    .logo {
-        width: 100px; 
-        height: auto; 
-        margin-right: 10px;
-    }
+        .logo {
+            width: 100px; 
+            height: auto; 
+            margin-right: 10px;
+        }
 
-    .movie-posters {
+        .movie-posters {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;

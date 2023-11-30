@@ -74,7 +74,6 @@
             padding: 20px;
             color: white;
             text-align: center;
-            position: fixed;
             bottom: 0;
             width: 100%;
             display: flex;
@@ -101,16 +100,16 @@
         }
 
         .logo-container {
-        display: flex;
-        align-items: center;
-        margin-left: 20px;
-    }
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+         }
 
-    .logo {
-        width: 100px;
-        height: auto;
-        margin-right: 10px; 
-    }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px; 
+        }
 
     </style>
 </head>
