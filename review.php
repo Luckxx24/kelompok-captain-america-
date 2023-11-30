@@ -15,26 +15,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <style>
-    body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin-bottom: 60px; 
-}
-
-        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin-bottom: 60px; 
+        }
+ 
         nav {
-    background-color: #002D5C;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+            background-color: #002D5C;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
 
 
         nav a {
@@ -47,10 +46,10 @@
             width: 40px; 
         }
         .content {
-    padding: 20px;
-    text-align: center;
-    margin-top: 80px; /* Sesuaikan dengan tinggi navigation bar */
-}
+            padding: 20px;
+            text-align: center;
+            margin-top: 80px; /* Sesuaikan dengan tinggi navigation bar */
+        }
         .movie-container {
             display: flex;
             margin: 20px;
@@ -157,7 +156,7 @@
     <a href="akun.php">
         <img class="profile" src="gambar/profile-user.png" alt="tiktok">
     </a>
-    <button class="button">Logout</button>
+    <button class="button"><a href="logout.php">Logout</a></button>
      </div>
     </nav>
 

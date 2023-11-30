@@ -190,7 +190,7 @@
     <a href="akun.php">
         <img class="profile" src="gambar/profile-user.png" alt="tiktok">
     </a>
-    <button class="button">Logout</button>
+    <button class="button"><a href="logout.php">Logout</a></button>
      </div>
     </nav>
 
