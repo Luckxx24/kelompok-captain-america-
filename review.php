@@ -15,11 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin-bottom: 60px; 
+}
 
         
         nav {
@@ -32,7 +33,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
+    z-index: 1000;
 }
 
 
@@ -48,10 +49,8 @@
         .content {
     padding: 20px;
     text-align: center;
-    margin-top: 60px; /* Add a top margin to accommodate the fixed navigation bar */
-    margin-bottom: 60px; /* Add a bottom margin to accommodate the fixed footer */
+    margin-top: 80px; /* Sesuaikan dengan tinggi navigation bar */
 }
-
         .movie-container {
             display: flex;
             margin: 20px;
