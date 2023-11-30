@@ -35,7 +35,7 @@
             margin: 0 15px;
         }
 
-        .logo {
+        .profile {
             width: 40px; 
         }
 
@@ -56,7 +56,7 @@
 
        
         .search-bar input {
-            width: 200px;
+            width: 220px;
             padding: 10px;
             border: none;
             border-radius: 10px;
@@ -66,13 +66,14 @@
         }
 
         .search-bar button {
-            background-color: #870000;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+      
+        background: url('gambar/search.png') no-repeat center center;
+        background-size: cover;
+        border: none;
+        width: 30px; 
+        height: 30px; 
+        cursor: pointer;
+    }
         .button{
             
             background-color: #870000; 
@@ -82,42 +83,69 @@
             border-radius: 5px;
             cursor: pointer;
             width:90px;
+            margin-left:20px;
         }
 
         
 
         footer {
-            background-color: #870000;
-            padding: 20px; 
-            color: white;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end; 
-        }
+    background-color: #870000;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 2%;
+}
 
-      
-        .social-icons img {
-            width: 30px; 
-            margin: 0 5px;
-        }
+
+.social-icons {
+    display: flex;
+   margin-right:30px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px; 
+}
+.logo-container {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 100px; 
+        height: auto; 
+        margin-right: 10px;
+    }
+
+
+
+
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav>
-        <div style="width: 100%; display: flex; justify-content: center;">
+      <div style="display: flex; align-items: center; margin-left: 20px;">
+        <img class="logo" src="gambar/logo.png" alt="Logo">
+      </div>
+        <div style="width: 100%; display: flex; justify-content: center; margin-left:100px">
             <a href="home.php">Home</a>
             <a href="explore.php">explore</a>
         </div>
 
-        <div style="display: flex; align-items: center; margin-right: 70px;">
-            <img class="logo" src="account-logo.png" alt="tiktok">
-            <a href="logout.php"><button class="button">Logout</button></a>
+        <div style="display: flex; align-items: center; margin-right: 30px;">
+            <img class="profile" src="gambar/profile-user.png" alt="tiktok">
+            <button class="button">Logout</button>
         </div>
     </nav>
 
@@ -137,9 +165,10 @@
         <p>copyright &copy; captain review</p>
      
         <div class="social-icons">
-            <img src="tiktok-logo.png" alt="TikTok Logo"> 
-            <img src="instagram-logo.png" alt="Instagram Logo"> 
-        </div>
+        <img src="gambar/tik-tok.png" alt="TikTok Logo"> 
+       <img src="gambar/instagram.png" alt="Instagram Logo"> 
+       </div>
+
     </footer>
 
 </body>
