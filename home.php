@@ -103,19 +103,20 @@
         
 
         footer {
-            background-color: #870000;
-            padding: 5px;
-            color: white;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto; 
-            margin-bottom: 2%;
-        }
+    background-color: #870000;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    position: fixed; /* Ubah menjadi fixed */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    z-index: 5000;
+}
 
         .social-icons {
             display: flex;

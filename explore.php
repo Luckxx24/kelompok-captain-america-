@@ -107,6 +107,7 @@
     padding: 5px;
     color: white;
     text-align: center;
+    position: fixed; 
     bottom: 0;
     width: 100%;
     display: flex;
@@ -114,7 +115,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto; 
-  
+    z-index: 5000;
 }
 
 
