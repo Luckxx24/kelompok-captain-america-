@@ -8,7 +8,6 @@
     $query = "select * from film";
     $result = mysqli_query($koneksi,$query);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +37,7 @@
             margin: 0 15px;
         }
 
-        .logo {
+        .profile {
             width: 40px; 
         }
 
@@ -52,14 +51,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-       
-            padding: 15px; 
-            border-radius: 10px; 
+            padding: 15px;
+            border-radius: 10px;
         }
+
+     
 
        
         .search-bar input {
-            width: 200px;
+            width: 220px;
             padding: 10px;
             border: none;
             border-radius: 10px;
@@ -69,13 +69,25 @@
         }
 
         .search-bar button {
-            background-color: #870000;
-            color: white;
+            position: relative;
+            overflow: hidden;
             border: none;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 5px;
             cursor: pointer;
+            width: 60px;
+            height: 43px;
+            border-radius:17px;
+            background-color: #870000;
         }
+
+        
+        .search-bar button img {
+            width: 35%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+
         .button{
             
             background-color: #870000; 
@@ -85,9 +97,50 @@
             border-radius: 5px;
             cursor: pointer;
             width:90px;
+            margin-left:20px;
         }
 
-        .movie-posters {
+        
+
+        footer {
+    background-color: #870000;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 2%;
+}
+
+
+.social-icons {
+    display: flex;
+   margin-right:30px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px; 
+}
+.logo-container {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 100px; 
+        height: auto; 
+        margin-right: 10px;
+    }
+
+    .movie-posters {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -118,51 +171,39 @@
             background-color: #001F40;
         }
 
-        footer {
-            background-color: #870000;
-            padding: 20px; 
-            color: white;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end; 
-        }
 
-        .social-icons img {
-            width: 30px; 
-            margin: 0 5px;
-        }
+
+
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav>
-        <div style="width: 100%; display: flex; justify-content: center;">
+      <div style="display: flex; align-items: center; margin-left: 20px;">
+        <img class="logo" src="gambar/logo.png" alt="Logo">
+      </div>
+        <div style="width: 100%; display: flex; justify-content: center; margin-left:100px">
             <a href="home.php">Home</a>
             <a href="explore.php">explore</a>
         </div>
 
-        <div style="display: flex; align-items: center; margin-right: 70px;">
-            <img class="logo" src="account-logo.png" alt="tiktok">
+        <div style="display: flex; align-items: center; margin-right: 30px;">
+            <img class="profile" src="gambar/profile-user.png" alt="tiktok">
             <button class="button">Logout</button>
         </div>
     </nav>
 
  
     <div class="content">
-
-        <div class="search-bar">
-            
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-    
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>
+            <img src="gambar/search.png" alt="Search">
+        </button>
     </div>
-
-    <div class="movie-posters">
+    <h2>Rekomendasi</h2>
+    <<div class="movie-posters">
         <?php
         while($data = mysqli_fetch_array($result)){
             
@@ -194,15 +235,17 @@
             </div> -->
         </div>
     </div>
+</div>
 
     <!-- Footer -->
     <footer>
         <p>copyright &copy; captain review</p>
      
         <div class="social-icons">
-            <img src="tiktok-logo.png" alt="TikTok Logo"> 
-            <img src="instagram-logo.png" alt="Instagram Logo"> 
-        </div>
+        <img src="gambar/tik-tok.png" alt="TikTok Logo"> 
+       <img src="gambar/instagram.png" alt="Instagram Logo"> 
+       </div>
+
     </footer>
 
 </body>

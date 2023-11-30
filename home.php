@@ -1,10 +1,12 @@
 <?php
+    include 'koneksi.php';
     session_start();
     if (!isset($_SESSION['id'])) {
         header('Location: login.php');
         exit();
     }
-    
+    $query = "select * from film";
+    $result = mysqli_query($koneksi,$query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,10 +51,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-       
-            padding: 15px; 
-            border-radius: 10px; 
+            padding: 15px;
+            border-radius: 10px;
         }
+
+     
 
        
         .search-bar input {
@@ -66,14 +69,25 @@
         }
 
         .search-bar button {
-        background-color: #870000; /* Add the background color */
-        background: url('gambar/search.png') no-repeat center center;
-        background-size: cover;
-        border: none;
-        width: 30px;
-        height: 30px; 
-        cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            width: 60px;
+            height: 43px;
+            border-radius:17px;
+            background-color: #870000;
         }
+
+        
+        .search-bar button img {
+            width: 35%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+
         .button{
             
             background-color: #870000; 
@@ -126,6 +140,37 @@
         margin-right: 10px;
     }
 
+    .movie-posters {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .movie-poster {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .movie-poster img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .movie-poster a {
+            display: block;
+            margin-top: 10px;
+            background-color: #002D5C;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .movie-poster a:hover {
+            background-color: #001F40;
+        }
+
 
 
 
@@ -151,15 +196,46 @@
 
  
     <div class="content">
-
-        <div class="search-bar">
-            
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-        <h2>Rekomendasi</h2>
-     
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>
+            <img src="gambar/search.png" alt="Search">
+        </button>
     </div>
+    <h2>Rekomendasi</h2>
+    <<div class="movie-posters">
+        <?php
+        while($data = mysqli_fetch_array($result)){
+            
+        ?>
+            <!-- Film 1 -->
+            <div class="movie-poster">
+                <img src="<?=$data['poster_film']?>" alt="Film 1 Poster">
+                <a href="review.php?id=<?=$data['id_film']?>">Review</a>
+            </div>
+            <?php
+            }?>
+
+            <!-- Film 2 -->
+            <!-- <div class="movie-poster">
+                <img src="captainamerica.jpeg" alt="Film 2 Poster">
+                <a href="review.php?title=Film 2">Review</a>
+            </div> -->
+
+             <!-- Film 3 -->
+             <!-- <div class="movie-poster">
+                <img src="civil.jpg" alt="Film 3 Poster">
+                <a href="review.php?title=Film 3">Review</a>
+            </div> -->
+
+             <!-- Film 4 -->
+             <!-- <div class="movie-poster">
+                <img src="infinity.jpg" alt="Film 4 Poster">
+                <a href="review.php?title=Film 4">Review</a>
+            </div> -->
+        </div>
+    </div>
+</div>
 
     <!-- Footer -->
     <footer>
