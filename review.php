@@ -15,26 +15,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <style>
-    body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    margin-bottom: 60px; 
+    padding-top: 60px; 
+    position: relative; 
 }
 
         
-        nav {
+   
+nav {
     background-color: #002D5C;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 5000; 
 }
+
+
 
 
         nav a {
@@ -49,9 +53,12 @@
         .content {
     padding: 20px;
     text-align: center;
-    margin-top: 80px; /* Sesuaikan dengan tinggi navigation bar */
-}
-        .movie-container {
+    margin-top: 80px; 
+
+
+}   
+
+.movie-container {
             display: flex;
             margin: 20px;
             border: 1px solid #ddd;
@@ -88,7 +95,7 @@
     padding: 5px;
     color: white;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -96,7 +103,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
+    z-index: 5000; 
 }
 
 
