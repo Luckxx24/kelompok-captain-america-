@@ -42,9 +42,10 @@
         }
 
         .content {
-            padding: 20px;
-            text-align: center;
-        }
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 60px; /* Tambahkan margin bawah sesuai tinggi footer */
+}
 
         .movie-container {
             display: flex;
@@ -90,8 +91,7 @@
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
-    margin-right: auto; 
-   
+    margin-right: auto;
 }
 
 
