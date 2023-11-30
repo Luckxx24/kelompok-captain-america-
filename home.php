@@ -109,23 +109,21 @@
             margin-left:20px;
         }
 
-        
-
         footer {
-    background-color: #870000;
-    padding: 5px;
-    color: white;
-    text-align: center;
- 
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto; 
-    z-index: 5000;
-}
+            background-color: #870000;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto; 
+            z-index: 5000;
+        }
 
         .social-icons {
             display: flex;
@@ -180,18 +178,15 @@
         }
 
         .banner {
-    margin-top: 20px;
-    text-align: center;
-}
+            margin-top: 20px;
+            text-align: center;
+        }
 
-.banner img {
-    width: 600px; 
-    height: 200px; 
-    border-radius: 10px; 
-}
-
-
-
+        .banner img {
+            width: 600px; 
+            height: 200px; 
+            border-radius: 10px; 
+        }
 
     </style>
 </head>
