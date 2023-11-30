@@ -204,6 +204,11 @@
             <img src="gambar/search.png" alt="Search">
         </button>
     </div>
+
+    <div class="banner">
+    <img src="gambar/banner.png" alt="Banner">
+</div>
+
     <h2>Rekomendasi</h2>
     <div class="movie-posters">
         <?php
