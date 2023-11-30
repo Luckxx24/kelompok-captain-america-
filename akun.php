@@ -75,20 +75,23 @@ session_start();
         }
 
         footer {
-            background-color: #870000;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
+    background-color: #870000;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    z-index: 5000;
+}       .social-icons {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-left: auto; /* Center horizontally */
-            margin-right: auto;
-            margin-bottom: 3%;
+            margin-right:30px;
         }
-
         .social-icons img {
             width: 30px;
             margin: 0 5px;
@@ -131,9 +134,11 @@ session_start();
         </div>
 
         <div style="display: flex; align-items: center; margin-right: 30px;">
-            <img class="profile" src="gambar/profile-user.png" alt="tiktok">
-            <button class="button"><a href="logout.php">Logout</a></button>
-        </div>
+    <a href="akun.php">
+        <img class="profile" src="gambar/profile-user.png" alt="tiktok">
+    </a>
+    <button class="button"><a href="logout.php">Logout</a></button>
+     </div>
     </nav>
 
     <div class="content">
@@ -148,11 +153,11 @@ session_start();
 
     <!-- Footer -->
     <footer>
-        <p>copyright &copy; captain review</p>
+        copyright &copy; captain review
      
         <div class="social-icons">
         <img src="gambar/tik-tok.png" alt="TikTok Logo"> 
-       <img src="gambar/instagram.png" alt="Instagram Logo"> <!-- This assumes instagram-logo.png is in the same directory as your HTML file -->
+       <img src="gambar/instagram.png" alt="Instagram Logo"> 
        </div>
 
     </footer>
