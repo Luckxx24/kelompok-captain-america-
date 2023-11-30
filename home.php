@@ -66,14 +66,14 @@
         }
 
         .search-bar button {
-      
+        background-color: #870000; /* Add the background color */
         background: url('gambar/search.png') no-repeat center center;
         background-size: cover;
         border: none;
-        width: 30px; 
+        width: 30px;
         height: 30px; 
         cursor: pointer;
-    }
+        }
         .button{
             
             background-color: #870000; 
