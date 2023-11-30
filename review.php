@@ -15,12 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin-bottom: 60px; 
-        }
+     body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Memastikan kontainer penuh tinggi layar */
+}
  
         nav {
             background-color: #002D5C;
@@ -46,10 +47,9 @@
             width: 40px; 
         }
         .content {
-            padding: 20px;
-            text-align: center;
-            margin-top: 80px; /* Sesuaikan dengan tinggi navigation bar */
-        }
+  flex: 1; /* Menyebarkan sisa tinggi secara otomatis */
+  padding-top: 220px; /* Sesuaikan dengan kebutuhan Anda */
+}
         .movie-container {
             display: flex;
             margin: 20px;
@@ -83,21 +83,18 @@
         
 
         footer {
-    background-color: #870000;
-    padding: 5px;
-    color: white;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
+  background-color: #870000;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto; 
+  z-index: 5000;
 }
-
 
 .social-icons {
     display: flex;
