@@ -23,13 +23,18 @@
 
         
         nav {
-            background-color: #002D5C;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
+    background-color: #002D5C;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
+}
+
 
         nav a {
             color: white;
@@ -40,11 +45,11 @@
         .profile {
             width: 40px; 
         }
-
         .content {
     padding: 20px;
     text-align: center;
-    margin-bottom: 60px; /* Tambahkan margin bawah sesuai tinggi footer */
+    margin-top: 60px; /* Add a top margin to accommodate the fixed navigation bar */
+    margin-bottom: 60px; /* Add a bottom margin to accommodate the fixed footer */
 }
 
         .movie-container {
@@ -92,6 +97,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
 }
 
 
