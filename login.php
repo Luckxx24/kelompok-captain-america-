@@ -19,7 +19,9 @@
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['password'] = $user['password'];
 
-                header('Location: home.php');
+                echo '<script>alert("Login Anda Berhasil! ' . $user['nama'] . '");</script>';
+                
+                echo '<script>setTimeout(function(){ window.location.href = "home.php"; },);</script>';
                 exit();
             } else {
                 echo '<script>alert("Username atau password salah.");</script>';
