@@ -187,7 +187,7 @@
       </div>
         <div style="width: 100%; display: flex; justify-content: center; margin-left:100px">
             <a href="home.php">Home</a>
-            <a href="explore.php">explore</a>
+            <a href="explore.php">Explore</a>
         </div>
 
         <div style="display: flex; align-items: center; margin-right: 30px;">
