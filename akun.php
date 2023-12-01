@@ -143,7 +143,7 @@ session_start();
 
     <div class="content">
         <img class="profile-picture" src="user.jpg" alt="Profile Picture">
-        <a href="">Tambah Foto</a>
+       
         <b><p>Nama : <?=$_SESSION['nama']?><br></b></p>
         <b><p>Username : <?=$_SESSION['username']?><br></b></p>
         <b><p>Email : <?=$_SESSION['email']?><br></b></p>
