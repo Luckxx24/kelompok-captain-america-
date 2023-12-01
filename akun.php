@@ -148,7 +148,7 @@ session_start();
         <b><p>Username : <?=$_SESSION['username']?><br></b></p>
         <b><p>Email : <?=$_SESSION['email']?><br></b></p>
         <b><p>Password : <?=$_SESSION['password']?><br></b></p>
-        <button class="edit-button" value="Edit">Edit</button>
+     
     </div>
 
     <!-- Footer -->
